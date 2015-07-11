@@ -1,5 +1,21 @@
-allow system_server display_sysfs:file rw_file_perms;
-allow system_server init:unix_stream_socket getopt;
-allow system_server lge_touch_sysfs:file rw_file_perms;
-allow system_server time_daemon:unix_stream_socket connectto;
-allow system_server vibe_dev:file rw_file_perms;
+# Grant access to Qualcomm MSM Interface (QMI) radio sockets to system services
+# (e.g., LocationManager)
+qmux_socket(system_server)
+
+# PowerManagerService access to sensors socket
+unix_socket_connect(system_server, sensors, sensors)
+unix_socket_send(system_server, sensors, sensors)
+allow system_server sensors:unix_stream_socket sendto;
+allow system_server sensors_socket:sock_file r_file_perms;
+
+# mpdecision socket access
+unix_socket_connect(system_server, mpdecision, mpdecision)
+unix_socket_send(system_server, mpdecision, mpdecision)
+allow system_server mpdecision:unix_stream_socket sendto;
+allow system_server mpdecision_socket:dir search;
+
+# Read /data/tombstones/ramdump files.
+allow system_server ramdump_data_file:dir r_dir_perms;
+allow system_server ramdump_data_file:file r_file_perms;
+
+allow system_server self:netlink_socket create_socket_perms;
