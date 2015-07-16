@@ -344,6 +344,14 @@ on boot
     write /proc/sys/net/ipv6/conf/rmnet6/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet7/accept_ra 2
 
+    # Subsytem Restart
+    #adsp
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
+    #modem
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
+    #venus
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
+
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
     # setup permissions for IrRC  UART
@@ -932,7 +940,7 @@ service svelteoff /system/bin/logwrapper /system/bin/sh /system/etc/init.lge.sve
 	disabled
 	oneshot
 
-service thermal-engine /system/bin/thermal-engine -c /system/etc/thermal-engine-8974.conf
+service thermal-engine /system/bin/thermal-engine
    class main
    user root
    group root
