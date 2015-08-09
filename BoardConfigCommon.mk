@@ -18,6 +18,8 @@
 
 LOCAL_PATH := device/lge/g3-common
 
+PRODUCT_VENDOR_KERNEL_HEADERS := device/lge/g3-common/kernel-headers
+
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Platform
