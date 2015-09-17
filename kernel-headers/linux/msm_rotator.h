@@ -2,7 +2,7 @@
 #define __MSM_ROTATOR_H__
 
 #include <linux/types.h>
-#include </home/manups4e/android/g3/include/linux/msm_mdp.h>
+#include <linux/msm_mdp.h>
 
 #define MSM_ROTATOR_IOCTL_MAGIC 'R'
 
