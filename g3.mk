@@ -111,7 +111,7 @@ PRODUCT_PACKAGES += \
     e2fsck
 
 # BoringSSL hacks
- PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     libboringssl-compat
 
 # GPS
