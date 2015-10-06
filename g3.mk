@@ -49,6 +49,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
+# APN list
+ PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
@@ -106,6 +109,10 @@ PRODUCT_PACKAGES += \
 # Filesystem
 PRODUCT_PACKAGES += \
     e2fsck
+
+# BoringSSL hacks
+ PRODUCT_PACKAGES += \
+    libboringssl-compat
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -205,11 +212,31 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
-# Wifi
+#WLAN
 PRODUCT_PACKAGES += \
-    hostapd \
-    hostapd_default.conf \
-    dhcpcd.conf \
-    libwpa_client \
-    wpa_supplicant \
-    wpa_supplicant.conf
+     p2p_supplicant.conf \
+     gsm_domains.conf \
+     dhcpcd.conf \
+     hostapd \
+     libwpa_client \
+     wpa_supplicant \
+     wpa_supplicant.conf
+
+PRODUCT_PACKAGES += \
+     InCallUI \
+     Launcher3
+
+PRODUCT_PACKAGES += \
+     libmiscta \
+     libta \
+     tad_static \
+     ta_qmi_service
+ 
+PRODUCT_PACKAGES += \
+     timekeep \
+     TimeKeep \
+     thermanager \
+     macaddrsetup
+ 
+PRODUCT_PACKAGES += \
+     rmt_storage

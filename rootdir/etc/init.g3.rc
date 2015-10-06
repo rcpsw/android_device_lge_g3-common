@@ -49,8 +49,11 @@ on init
     symlink /storage/sdcard1 /external_sd
     symlink /storage/sdcard1 /mnt/external_sd
 
-# Support legacy libs
+    # Support legacy libs
     symlink /system/vendor/lib/egl /egl
+
+    # BoringSSL hacks
+    export LD_PRELOAD "/system/lib/libboringssl-compat.so"
 
     mkdir /dev/bus 0755 root root
     mkdir /dev/bus/usb 0755 root root
@@ -467,6 +470,8 @@ on post-fs-data
 
     # Create a folder for SRS to be able to create a usercfg file
     mkdir /data/data/media 0770 media media
+    mkdir /data/misc/camera 0770 camera camera
+
 
 #
 # Services start here
