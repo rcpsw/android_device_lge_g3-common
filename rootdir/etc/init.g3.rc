@@ -314,6 +314,18 @@ on boot
     chown system system /sys/devices/virtual/input/lge_touch/touch_wake_up_test
     chmod 664 /sys/devices/virtual/input/lge_touch/touch_wake_up_test
 
+    # create symlink for fb0 as HDMI
+    symlink /dev/graphics/fb0 /dev/graphics/hdmi
+
+    # setup permissions for fb0 related nodes
+    chown system graphics /sys/class/graphics/fb0/hpd
+    chown system graphics /sys/class/graphics/fb0/vendor_name
+    chown system graphics /sys/class/graphics/fb0/product_description
+    chmod 0664 /sys/devices/virtual/graphics/fb0/hpd
+    chmod 0664 /sys/devices/virtual/graphics/fb0/vendor_name
+    chmod 0664 /sys/devices/virtual/graphics/fb0/product_description
+
+
     chown bluetooth net_bt_stack /dev/btlock
     chmod 0600 /dev/btlock
 
