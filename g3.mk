@@ -110,6 +110,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
+# BoringSSL hacks
+PRODUCT_PACKAGES += \
+    libboringssl-compat
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8974
