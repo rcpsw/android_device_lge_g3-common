@@ -112,8 +112,8 @@ PRODUCT_PACKAGES += \
     libboringssl-compat
 
 # GPS
-#PRODUCT_PACKAGES += \
-#    gps.msm8974
+PRODUCT_PACKAGES += \
+gps.msm8974
 
 # IRSC
 PRODUCT_COPY_FILES += \
