@@ -49,9 +49,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-# APN list
- PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml
-
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
@@ -95,8 +92,8 @@ PRODUCT_PACKAGES += \
     bdAddrLoader
 
 # Camera
-PRODUCT_PACKAGES += \
-   camera.msm8974
+#PRODUCT_PACKAGES += \
+#   camera.msm8974
 
 # Display
 PRODUCT_PACKAGES += \
@@ -115,8 +112,8 @@ PRODUCT_PACKAGES += \
     libboringssl-compat
 
 # GPS
-PRODUCT_PACKAGES += \
-    gps.msm8974
+#PRODUCT_PACKAGES += \
+#    gps.msm8974
 
 # IRSC
 PRODUCT_COPY_FILES += \
