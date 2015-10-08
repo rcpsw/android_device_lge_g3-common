@@ -40,7 +40,7 @@ $(DXHDCP2_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += $(DXHDCP2_SYMLINKS)
 
 KEYMASTER_IMAGES := \
-    keymaste.b00 keymaste.b01 keymaste.b02 keymaste.b03 keymaste.mdt
+    keymaster.b00 keymaster.b01 keymaster.b02 keymaster.b03 keymaster.mdt
 
 KEYMASTER_SYMLINKS :=$(addprefix $(TARGET_OUT_VENDOR)/firmware/keymaster/,$(KEYMASTER_IMAGES))
 $(KEYMASTER_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
