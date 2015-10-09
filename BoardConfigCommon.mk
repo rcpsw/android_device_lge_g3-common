@@ -102,6 +102,9 @@ TARGET_POWERHAL_VARIANT := qcom
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 
+# GPS definitions for Qualcomm solution
+BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
+
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
