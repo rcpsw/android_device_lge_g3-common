@@ -29,6 +29,13 @@
         <!-- Output devices -->
         <device name="SND_DEVICE_OUT_SPEAKER_AND_HDMI" acdb_id="18" />
         <device name="SND_DEVICE_OUT_AFE_PROXY" acdb_id="20" />
+        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15" />
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" acdb_id="15" />
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="15" />
+        <device name="SND_DEVICE_OUT_VOIP_HANDSET" acdb_id="7" />
+        <device name="SND_DEVICE_OUT_VOIP_SPEAKER" acdb_id="15" />
+        <device name="SND_DEVICE_OUT_VOIP_HEADPHONES" acdb_id="10" />
+
 
         <!-- Input devices -->
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="63" />
@@ -40,7 +47,16 @@
     </acdb_ids>
 
     <backend_names>
-        <!-- empty -->
+        <device name="SND_DEVICE_OUT_HANDSET" backend="handset" />
+        <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker" />
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" backend="speaker" />
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" />
+        <device name="SND_DEVICE_OUT_VOICE_HANDSET" backend="handset" />
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker" />
+        <device name="SND_DEVICE_OUT_VOICE_TTY_HCO_HANDSET" backend="handset" />
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_ANC_HEADSET" backend="speaker-anc-nc-headphone" />
+        <device name="SND_DEVICE_OUT_VOIP_HANDSET" backend="handset" />
+        <device name="SND_DEVICE_OUT_VOIP_SPEAKER" backend="speaker" />
     </backend_names>
 
     <pcm_ids>

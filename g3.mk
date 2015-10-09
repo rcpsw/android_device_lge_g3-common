@@ -220,6 +220,10 @@ PRODUCT_PACKAGES += \
      wpa_supplicant \
      wpa_supplicant.conf
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/wcnss_service:system/bin/wcnss_service
+
+
 PRODUCT_PACKAGES += \
      InCallUI \
      Launcher3
@@ -238,3 +242,7 @@ PRODUCT_PACKAGES += \
  
 PRODUCT_PACKAGES += \
      rmt_storage
+
+
+
+
